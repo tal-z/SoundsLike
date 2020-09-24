@@ -18,7 +18,7 @@ json, sys, re, cmudict, g2p-en
 
 <b>Notes:</b>
 
--While this module supports multi-word search terms, it always reduces them to one group of phones.
+-While this module supports multi-token search terms, it always reduces them to one group of phones.
  This could lead to some unexpected, but still useful, results. 
  Resultantly, multi-token results are not supported at this time.
 
