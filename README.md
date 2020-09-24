@@ -6,11 +6,13 @@ It also offers some tools for working with dictionaries, if you prefer to use yo
 SoundsLike is developed by Tal Zaken. 
 
 Credits:
+
 -The CMU Pronouncing Dictionary
 -cmudict python wrapper by David L. Day
 -g2p-en python module by Kyubyong Park
 
 Dependencies:
+
 -json
 -sys
 -re
@@ -18,6 +20,7 @@ Dependencies:
 -g2p-en
 
 Notes:
+
 -While this module supports multi-word search terms, it always reduces them to one group of phones.
  This could lead to some unexpected, but still useful, results. 
  Resultantly, multi-word results are not supported at this time.
@@ -27,6 +30,7 @@ Notes:
  This would be useful if one wishes to add terms to a custom dictionary.
 
 Ideas:
+
 -create match pattern for same first and last syllable, and same number of syllables.
 -add multi-word results. Check each word in multi-word search terms,
  and concatenate all possible results if all words are found.
