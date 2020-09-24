@@ -7,9 +7,13 @@
             SoundsLike helps find words that sound like other words.
         </h1>
         <h3> 
-            SoundsLike uses the CMU Pronouncing Dictionary. It also offers some tools for working with dictionaries, if you prefer to use your own. 
+            SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict
             <br>
-            Phoneme generation is provided by g2p-en: https://github.com/Kyubyong/g2p
+            It also offers some tools for working with dictionaries, if you prefer to use your own. 
+            <br>
+            Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p
+            <br>
+            Similar string-matching is provided by difflib: https://docs.python.org/3/library/difflib.html
         <br>
         SoundsLike is developed by Tal Zaken.
         </h3>
