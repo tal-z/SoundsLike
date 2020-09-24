@@ -53,6 +53,10 @@
         -Develop module to figure out "smart selection" results for display.
         <br>
         <br>
+        <b>License:</b>
+        Licensed under the Apache License, Version 2.0
+        <br>
+        <br>
         Enjoy!
     </body>
 </html>
