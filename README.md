@@ -20,7 +20,7 @@ json, sys, re, cmudict, g2p-en
 
 -While this module supports multi-word search terms, it always reduces them to one group of phones.
  This could lead to some unexpected, but still useful, results. 
- Resultantly, multi-word results are not supported at this time.
+ Resultantly, multi-token results are not supported at this time.
 
 -Support is not presently offered for multiple pronunciations of a given token.
 
@@ -32,8 +32,8 @@ json, sys, re, cmudict, g2p-en
 
 -create match pattern for same first and last syllable, and same number of syllables.
 
--add multi-word results. Check each word in multi-word search terms,
- and concatenate all possible results if all words are found.
+-add multi-token results. Check each token in multi-token search terms,
+ and concatenate all possible results if all tokens are found.
  e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
 
 -For separate module, figure out "smart selection" results for display.
