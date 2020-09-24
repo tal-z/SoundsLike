@@ -16,9 +16,12 @@
         <br>
         -g2p-en python module by Kyubyong Park
         <br>
+        <br>
         <b>Dependencies:</b>
         <br>
         json, sys, re, cmudict, g2p-en
+        <br>
+        <br>
         <b>Notes:</b>
         <br>
         -While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results.Resultantly, multi-token results are not supported at this time.
@@ -26,6 +29,8 @@
         -Support is not presently offered for multiple pronunciations of a given token.
         <br>
         -English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This would be useful if one wishes to add terms to a custom dictionary.
+        <br>
+        <br>
         <b>Ideas:</b>
         <br>
         -create match pattern for same first and last syllable, and same number of syllables.
@@ -35,6 +40,8 @@
         e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
         <br>
         -Develop module to figure out "smart selection" results for display.
+        <br>
+        <br>
         <br>
         <br>
         Enjoy!
