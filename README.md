@@ -14,11 +14,7 @@ Soundslike uses the CMU Pronouncing Dictionary. It also offers some tools for wo
 
 <b>Dependencies:</b>
 
--json
--sys
--re
--cmudict
--g2p-en
+json, sys, re, cmudict, g2p-en
 
 <b>Notes:</b>
 
