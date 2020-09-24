@@ -4,7 +4,7 @@
 Soundslike uses the CMU Pronouncing Dictionary. It also offers some tools for working with dictionaries, if you prefer to use your own.
 </h3> 
 
-
+<h3>SoundsLike is developed by Tal Zaken.</h3>
 
 <b>Credits:</b>
 
@@ -41,5 +41,5 @@ json, sys, re, cmudict, g2p-en
 
 Enjoy!
 
-<h3>SoundsLike is developed by Tal Zaken.</h3>
+
 
