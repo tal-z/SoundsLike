@@ -7,7 +7,7 @@ Soundslike uses the CMU Pronouncing Dictionary. It also offers some tools for wo
 
 <h3>SoundsLike is developed by Tal Zaken.</h3>
 
-<hr style="height:1px">
+<hr style="height: 0px">
 
 <b>Credits:</b>
 
