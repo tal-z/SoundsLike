@@ -13,6 +13,7 @@ Dependencies:
 -sys
 -re
 -cmudict
+-g2p-en
 
 Notes:
 -While this module supports multi-word search terms, it always reduces them to one group of phones.
