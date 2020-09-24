@@ -1,8 +1,8 @@
 <h1>Welcome to the SoundsLike module.</h1>
 
 <h3>SoundsLike helps find words that sound like other words. <br>
- SoundsLike uses the CMU Pronouncing Dictionary. <br>
- It also offers some tools for working with dictionaries, if you prefer to use your own.
+ SoundsLike uses the CMU Pronouncing Dictionary. It also offers some tools for working with dictionaries, if you prefer to use your own. <br>
+ Phoneme generation is provided by g2p-en: https://github.com/Kyubyong/g2p
 </h3> 
 
 <h3>SoundsLike is developed by Tal Zaken.</h3>
