@@ -1,5 +1,5 @@
-<h1>Welcome to the SoundsLike module.</h1>
-<h2>SoundsLike helps find words that sound like other words.</h2>
+<h1 display: inline>Welcome to the SoundsLike module.</h1>
+<h2 display: inline>SoundsLike helps find words that sound like other words.</h2>
 
 <h3> <br>
  SoundsLike uses the CMU Pronouncing Dictionary. It also offers some tools for working with dictionaries, if you prefer to use your own. <br>
