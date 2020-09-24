@@ -1,10 +1,11 @@
 """
-FindHomophones is a package with functions for finding similar-sounding words.
+FindHomophones is a module with functions for finding similar-sounding words.
 FindHomophones is the first module of the SoundLike library.
 Created by Tal Zaken using the English Language CMU Dict.
 Credits:
 -The CMU Pronouncing Dictionary
 -cmudict python wrapper by David L. Day
+-g2p-en python module by Kyubyong Park
 Dependencies:
 -json
 -sys
