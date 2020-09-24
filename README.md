@@ -42,8 +42,6 @@
         -Develop module to figure out "smart selection" results for display.
         <br>
         <br>
-        <br>
-        <br>
         Enjoy!
     </body>
 </html>
