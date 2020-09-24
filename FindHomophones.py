@@ -1,5 +1,5 @@
 """
-FindHomophones is a module with functions for finding similar-sounding words.
+FindHomophones is a package with functions for finding similar-sounding words.
 FindHomophones is the first module of the SoundLike library.
 Created by Tal Zaken using the English Language CMU Dict.
 Credits:
@@ -16,10 +16,10 @@ Notes:
 -Support is not presently offered for multiple pronunciations of a given token.
 """
 
-import json
 import sys
 import re
 import cmudict
+from GeneratePronunciation import generate_pronunciation
 
 ### Set Pronouncing Dictionary Here ###
 """
@@ -33,24 +33,7 @@ CMU_dict = {k: v for k, v in cmudict.entries()}
 
 
 
-ARPAbet_Phonemes_Dict = {
-    'vowels_front': ['IY', 'IH', 'EY', 'EH', 'AE'],
-    'vowels_mid': ['ER', 'AX', 'AH'],
-    'vowels_back': ['AA', 'AO', 'OW', 'UH', 'UW'],
-    'dipthongs': ['AY', 'AW', 'OY', 'IX'],
-    'stop_consonants_voiced': ['B', 'D', 'G'],
-    'stop_consonants_unvoiced': ['P', 'T', 'K'],
-    'fricatives_voiced': ['V', 'DH', 'Z', 'ZH'],
-    'fricatives_unvoiced': ['F', 'TH', 'S', 'SH'],
-    'semivowels_liquids': ['L', 'EL', 'R'],
-    'semivowels_glides': ['W', 'WH', 'Y'],
-    'nasal_non-vocalic': ['M', 'N', 'NX'],
-    'nasal_vocalic': ['EM', 'EN'],
-    'affricates': ['CH', 'JH'],
-    'others_whisper': ['HH'],
-    'others_vocalic': ['DX'],
-    'others_glottal-stop': ['Q']
-}
+ARPAbet_Phonemes_Dict = {k: v[0] for k, v in cmudict.phones()}
 
 class Word_Functions():
 
@@ -65,13 +48,17 @@ class Word_Functions():
             word = None
         return word
 
-    def pronunciation(term):
-        """Takes a term and returns its pronunciation in CMU dict. If no pronunciation is found, it throws an error."""
+    def pronunciation(term, generate=False):
+        """Takes a term and returns its pronunciation in CMU dict.
+        Default behavior is to throw an error if no pronunciation is found.
+        if optional argument generate=True, it will attempt to generate a pronunciation."""
         search_pron = []
         for w in term.lower().split():
             if w in CMU_dict:
                 w_pron = CMU_dict[w]
                 search_pron.append(w_pron)
+            elif generate:
+                 return generate_pronunciation(term)
             else:
                 sys.exit(
                     "Dictionary Error: Search term or search token not found in dictionary. "
@@ -117,13 +104,25 @@ class Pronunciation_Functions():
                 if int(p[-1]) > 0:
                     return pron.index(p)
 
-    def classify_vowel_sounds(pron):
+    def classify_phones(pron):
         """Given a word's pronunciation, returns a simplified pronunciation
         where vowel sounds have been replaced with the name of their ARPAbet classification"""
         classified_pron = []
         for phone in pron:
             if phone[-1].isdigit():
-                phone = [key for key, val in ARPAbet_Phonemes_Dict.items() if phone[:-1] in val]
+                phone = phone[:-1]
+            phone_class = ARPAbet_Phonemes_Dict[phone]
+            classified_pron.append(phone_class)
+
+        return classified_pron
+
+    def classify_vowel_phones(pron):
+        """Given a word's pronunciation, returns a simplified pronunciation
+        where vowel sounds have been replaced with the name of their ARPAbet classification"""
+        classified_pron = []
+        for phone in pron:
+            if phone[-1].isdigit():
+                phone = [val for key, val in ARPAbet_Phonemes_Dict.items() if phone[:-1] in key]
             classified_pron.append(phone)
 
         return classified_pron
@@ -139,55 +138,64 @@ class Phone_Functions():
             return phone[:-1]
 
     def ARPAbet_class(phone):
-        pass
+        return ARPAbet_Phonemes_Dict[phone]
 
 
 
 class Search_Functions():
 
-    def find_perfectHomophones(Search_Term):
+    def find_perfectHomophones(Search_Term, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of words with the exact same pronunciation in CMU Dict.
         """
-        Search_Pron = Word_Functions.pronunciation(Search_Term)
+        Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
         PerfectHomophones = [word.title() for word in CMU_dict if CMU_dict[word] == Search_Pron]
 
         return PerfectHomophones
 
-    def find_closeHomophones(Search_Term):
+    def find_closeHomophones(Search_Term, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of words with the near-exact same pronunciation in CMU Dict
         by ignoring stress marks.
         """
-        Search_Pron = [CMU_dict[w] if w in CMU_dict else sys.exit("Error: Search term or search token not found in dictionary. Contact administrator to update dictionary if necessary.") for w in Search_Term.lower().split()]
-        Search_Pron = [Phone_Functions.unstressed_phone(p) for sublist in Search_Pron for p in sublist]  # flatten list of lists of phones into one list of unstressed phones."""
+        Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
+        Search_Pron = [Phone_Functions.unstressed_phone(p) for p in Search_Pron]
 
         CloseHomophones = [word.title() for word in CMU_dict if [Phone_Functions.unstressed_phone(p) for p in CMU_dict[word]] == Search_Pron]
 
         return CloseHomophones
 
-    def find_vowelClassHomophones(Search_Term):
+    def find_vowelClassHomophones(Search_Term, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and classifies its vowel phones according to ARPAbet. (See the ARPAbet_phonemes_dict above.)
         Then, it returns a list of words with matching phones
         where vowel phones have been simplified to their ARPAbet classification.
-        This takes longer than other functions because it classifies every vowel sound for every entry in CMU Dict.
-        Still runs in an acceptable timeframe, though.
         """
-        Search_Pron = [CMU_dict[w] if w in CMU_dict
-                       else sys.exit("Error: Search term or search token not found in dictionary. Contact administrator to update dictionary if necessary.")
-                       for w in Search_Term.lower().split()]
-        Search_Pron = [p for sublist in Search_Pron for p in sublist]  # flatten list of lists into one list
-        VowelClassPron = Pronunciation_Functions.classify_vowel_sounds(Search_Pron)
+        Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
+        VowelClassPron = Pronunciation_Functions.classify_vowel_phones(Search_Pron)
         VowelClassHomophones = [word.title() for word in CMU_dict
-                                if Pronunciation_Functions.classify_vowel_sounds(CMU_dict[word]) == VowelClassPron]
+                                if Pronunciation_Functions.classify_vowel_phones(CMU_dict[word]) == VowelClassPron]
 
         return VowelClassHomophones
 
-    def find_endRhymes(Search_Term, match_syllables=False, match_alpha=False):
+    def find_phoneClassHomophones(Search_Term, generate=False):
+        """
+        Takes a search term, searches its pronunciation,
+        and classifies its phones according to ARPAbet. (See the ARPAbet_phonemes_dict above.)
+        Then, it returns a list of words with matching phones
+        where phones have been simplified to their ARPAbet classifications.
+        """
+        Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
+        PhoneClassPron = Pronunciation_Functions.classify_phones(Search_Pron)
+        PhoneClassHomophones = [word.title() for word in CMU_dict
+                                if Pronunciation_Functions.classify_phones(CMU_dict[word]) == PhoneClassPron]
+
+        return PhoneClassHomophones
+
+    def find_endRhymes(Search_Term, match_syllables=False, match_alpha=False, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of end-rhyming words in CMU Dict.
@@ -200,8 +208,7 @@ class Search_Functions():
                 If True, returns only words with the same first letter as Search_Term.
                 If unspecified, defaults to match_alpha=False.
         """
-        Search_Pron = [CMU_dict[w] if w in CMU_dict else sys.exit("Error: Search term or search token not found in dictionary. Contact administrator to update dictionary if necessary.") for w in Search_Term.lower().split()]
-        Search_Pron = [p for sublist in Search_Pron for p in sublist]  # flatten list of lists into one list
+        Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
         if not match_syllables:
             if not match_alpha:
                 return [key.title() for key, val in CMU_dict.items()
@@ -224,45 +231,3 @@ class Search_Functions():
                         if Pronunciation_Functions.count_syllables(Search_Pron) == Pronunciation_Functions.count_syllables(val)
                         if Search_Pron[Pronunciation_Functions.index_last_stressed_vowel(Search_Pron):] == val[Pronunciation_Functions.index_last_stressed_vowel(val):]
                         ]
-
-
-
-
-### Test Area ###
-"""
-test_word = 'Lianne'
-
-a, b, c, d, e, f, g = \
-    Search_Functions.find_perfectHomophones(test_word), \
-    Search_Functions.find_closeHomophones(test_word), \
-    Search_Functions.find_vowelClassHomophones(test_word), \
-    Search_Functions.find_endRhymes(test_word, match_syllables=False, match_alpha=False), \
-    Search_Functions.find_endRhymes(test_word, match_syllables=False, match_alpha=True), \
-    Search_Functions.find_endRhymes(test_word, match_syllables=True, match_alpha=False), \
-    Search_Functions.find_endRhymes(test_word, match_syllables=True, match_alpha=True)
-
-
-print(
-    f"Perfect Homophones:   {len(a)} {a}",
-    f"Close Homophones:   {len(b)} {b}",
-    f"Vowel-class Homophones:   {len(c)} {c}",
-    f"End-rhymes:   {len(d)} {d}",
-    f"Alpha Matching End-rhymes:   {len(e)} {e}",
-    f"Syllabic Matching End-rhymes:   {len(f)} {f}",
-    f"Alpha-Syllabic Matching End-rhymes:   {len(g)} {g}",
-    sep='\n'
-)
-"""
-
-"""
-Ideas:
--create match pattern that reduces all phones to their ARPAbet classifications. 
---will probably take a while. curious how much quicker if I restructure the dictionary...
--create match pattern for same first and last syllable, and same number of syllables. 
--add multi-word results. Check each word in multi-word search terms, and concatenate all possible results if all words are found.
---e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc. 
--For separate module, figure out "smart selection" results for display.
--Ben: edit distance using keyboard key proximity
-"""
-
-
