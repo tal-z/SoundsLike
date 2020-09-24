@@ -1,13 +1,13 @@
 <h1>Welcome to the SoundsLike module.</h1>
 
-<h3>SoundsLike helps find words that sound like other words. 
-
-Soundslike uses the CMU Pronouncing Dictionary. It also offers some tools for working with dictionaries, if you prefer to use your own.
+<h3>SoundsLike helps find words that sound like other words. <br>
+ Soundslike uses the CMU Pronouncing Dictionary. <br>
+ It also offers some tools for working with dictionaries, if you prefer to use your own.
 </h3> 
 
 <h3>SoundsLike is developed by Tal Zaken.</h3>
 
-<hr style="height: 0px">
+<hr>
 
 <b>Credits:</b>
 
