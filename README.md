@@ -1,17 +1,17 @@
-# SoundsLike
+<h1># SoundsLike</h1>
 
-Welcome to the SoundsLike module. SoundsLike helps find words that sound like other words, using the CMU Pronouncing Dictionary. 
-It also offers some tools for working with dictionaries, if you prefer to use your own. 
+<h2>Welcome to the SoundsLike module. SoundsLike helps find words that sound like other words, using the CMU Pronouncing Dictionary. 
+It also offers some tools for working with dictionaries, if you prefer to use your own.</h2> 
 
 SoundsLike is developed by Tal Zaken. 
 
-Credits:
+<b>Credits:</b>
 
 -The CMU Pronouncing Dictionary
 -cmudict python wrapper by David L. Day
 -g2p-en python module by Kyubyong Park
 
-Dependencies:
+<b>Dependencies:</b>
 
 -json
 -sys
@@ -19,7 +19,7 @@ Dependencies:
 -cmudict
 -g2p-en
 
-Notes:
+<b>Notes:</b>
 
 -While this module supports multi-word search terms, it always reduces them to one group of phones.
  This could lead to some unexpected, but still useful, results. 
