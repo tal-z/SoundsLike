@@ -30,11 +30,13 @@ CMU_dict = json.loads(f)
 """
 
 CMU_dict = {k: v for k, v in cmudict.entries()}
-####################
+#######################################
 
 
 
 ARPAbet_Phonemes_Dict = {k: v[0] for k, v in cmudict.phones()}
+
+
 
 class Word_Functions():
 
