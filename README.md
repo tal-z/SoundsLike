@@ -1,4 +1,16 @@
-<h1 display="inline">Welcome to the SoundsLike module.</h1>
+<style>
+h1 { 
+    display: block;
+    font-size: 0.9em;
+    margin-top: -1.91em;
+    margin-bottom: -1.91em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+</style>
+
+<h1>Welcome to the SoundsLike module.</h1>
 <h2 display="inline">SoundsLike helps find words that sound like other words.</h2>
 
 <h3> <br>
