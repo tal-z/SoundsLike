@@ -1,8 +1,11 @@
 """
+This module is provided along with the SoundsLike library.
 This module provides helper functions for configuring and re-configuring dictionaries.
 """
 
 import json
+
+
 
 def flattenDict(dict):
     """
