@@ -1,4 +1,4 @@
-<h1>Welcome to the SoundsLike module.</h1>
+<h1>Welcome to the SoundsLike module.</h1 style="height:30px">
 
 <h3>SoundsLike helps find words that sound like other words. 
 
