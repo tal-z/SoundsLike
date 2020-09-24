@@ -13,7 +13,7 @@
             <br>
             Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p
             <br>
-            Similar string-matching is provided by difflib: https://docs.python.org/3/library/difflib.html
+            Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html
         <br>
         SoundsLike is developed by Tal Zaken.
         </h3>
