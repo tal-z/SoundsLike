@@ -39,5 +39,5 @@ It also offers some tools for working with dictionaries, if you prefer to use yo
 
 Enjoy!
 
-<h4>SoundsLike is developed by Tal Zaken.</h4>
+<h3>SoundsLike is developed by Tal Zaken.</h3>
 
