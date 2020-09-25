@@ -17,10 +17,10 @@
         <h3>
             Who it's for:
         </h3>
-            <br>
             SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
             -Telephone Customer Service
             -Immigration Research
+        <br>
         <br>
         <h3>
             SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict
