@@ -17,14 +17,33 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
 For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. Pip install is planned for the future.
 
 ### Simple usage:
+##### Perfect Homophones:
 
     from SoundsLike.Homophones import Search
     
     Search.perfectHomophones('Jonathan')
     
-
-
 `['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']`
+
+##### Close Homophones:
+
+    Search.perfectHomophones('Lucy')
+
+`['Lucey', 'Lucie', 'Lucy', 'Luisi']`
+
+    Search.closeHomophones('Lucy')
+
+`['Lucey', 'Lucie', 'Lucy', 'Luisi']`
+
+     Search.perfectHomophones('Lou C')
+    
+`[]`
+
+     Search.closeHomophones('Lou C')
+    
+`['Lucey', 'Lucie', 'Lucy', 'Luisi']`
+
+##### Other Homophone Patterns:
 
 ### Full documentation:
 
