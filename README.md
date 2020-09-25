@@ -21,6 +21,9 @@
             -Immigration Research
         <br>
         <br>
+        #### How to use it:
+        for now, no pip install is available. You gotta download the .py files and save them where you want them.
+
         <h3>
             SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict
             <br>
