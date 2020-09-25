@@ -31,7 +31,9 @@
             Simple usage:
         </h3>
             <code>
-            from SoundsLike import FindHomophones
+                <br>
+                coming soon!
+                <br>
             </code>
         <br>
         <br>
