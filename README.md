@@ -1,4 +1,6 @@
-# Welcome to SoundsLike. <br> 
+border-bottom: none
+
+# Welcome to SoundsLike.
 ## SoundsLike is a python package. <br>SoundsLike helps find words that sound like other words.
 
 ### What it does:
