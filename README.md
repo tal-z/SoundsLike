@@ -11,9 +11,9 @@ SoundsLike provides various functions that attempt to generate lists of similar-
 
 SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
 
-            -Telephone Customer Service
-            -Immigration Research
-            -Entity Resolution
+- Telephone Customer Service
+- Immigration Research
+- Entity Resolution
 
 ### How to use it:
 
@@ -35,24 +35,24 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 ### SoundsLike is developed by Tal Zaken.
 
 ### Credits:
--The CMU Pronouncing Dictionary
--cmudict python wrapper by David L. Day
--g2p-en python module by Kyubyong Park
+- The CMU Pronouncing Dictionary
+- cmudict python wrapper by David L. Day
+- g2p-en python module by Kyubyong Park
 
 ### Dependencies:
       
 json, sys, re, cmudict, g2p-en
  
 ### Notes:
--While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results. Resultantly, multi-token results are not supported at this time.
--Support is not presently offered for multiple pronunciations of a given token.
--English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This would be useful if one wishes to add terms to a custom dictionary.
+- While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results. Resultantly, multi-token results are not supported at this time.
+- Support is not presently offered for multiple pronunciations of a given token.
+- English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This would be useful if one wishes to add terms to a custom dictionary.
 
 ### Ideas:
 
--create match pattern for same first and last syllable, and same number of syllables.
--Add multi-token results. Check each token in multi-token search terms, and concatenate all possible results if all tokens are found. e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
--Develop module to figure out "smart selection" results for display.
+- Create match pattern for same first and last syllable, and same number of syllables.
+- Add multi-token results. Check each token in multi-token search terms, and concatenate all possible results if all tokens are found. e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
+- Develop module to figure out "smart selection" results for display.
 
 ### License:
 
