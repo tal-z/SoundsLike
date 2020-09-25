@@ -46,11 +46,12 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
     
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
-####### Other Homophone Patterns available via help(SoundsLike.Homophones)
+###### Other homophone patterns available in Homophones.py using the `help()` function in your interactive interpreter.
 
 ### Full documentation:
 
-Coming soon! For detailed instructions, try running `help(SoundsLike)` in your interactive python interpreter.
+Coming soon! 
+For detailed instructions, try running `help(SoundsLike)` in your interactive python interpreter.
             
 ###### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict  <br>It also offers some tools for working with dictionaries, if you prefer to use your own. <br>Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p  <br>Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html  
 
