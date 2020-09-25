@@ -27,6 +27,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 
 ##### Close Homophones:
 ***Example 1***
+
     Search.perfectHomophones('Lucy')
 
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
@@ -36,6 +37,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
 ***Example 2***
+
      Search.perfectHomophones('Lou C')
     
 `[]`
