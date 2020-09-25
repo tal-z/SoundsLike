@@ -39,10 +39,11 @@
             <br>
             Search.perfectHomophones('Jonathan')
             </code></pre>
-            <br>
-            <samp>
+        <samp>
                 ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
             </samp>
+            <br>
+            
         <br>
         <br>
         <h3>
