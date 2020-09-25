@@ -36,6 +36,7 @@
         </h3>
             <pre><code>
             from SoundsLike.Homophones import Search
+            <br>
             Search.perfectHomophones('Jonathan')
             </code></pre>
             <br>
