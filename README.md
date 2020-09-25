@@ -35,7 +35,7 @@
         <br>
         <b>Notes:</b>
         <br>
-        -While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results.Resultantly, multi-token results are not supported at this time.
+        -While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results. Resultantly, multi-token results are not supported at this time.
         <br>
         -Support is not presently offered for multiple pronunciations of a given token.
         <br>
