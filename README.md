@@ -22,10 +22,9 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 ### Simple usage:
 
     from SoundsLike.Homophones import Search
-    <br>
+    
     Search.perfectHomophones('Jonathan')
-    <br>
-
+    
 
 
 `['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']`
