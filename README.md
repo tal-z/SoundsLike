@@ -35,8 +35,8 @@
             Simple usage:
         </h3>
             <pre><code>
-                >>> from SoundsLike.Homophones import Search
-                >>> Search.perfectHomophones('Jonathan')
+            from SoundsLike.Homophones import Search
+            Search.perfectHomophones('Jonathan')
             </code></pre>
             <br>
             <samp>
