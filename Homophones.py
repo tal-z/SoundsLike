@@ -2,13 +2,18 @@
 Homophones is a module with functions for finding similar-sounding words.
 Homophones is the first module of the SoundLike package.
 
+Dependencies:
+-cmudict (python package available via PyPI)
+-g2p-en (python package available via PyPI)
+
 Created by Tal Zaken.
 """
 
+
 import sys
 import re
-import cmudict
 import warnings
+import cmudict
 from g2p_en import G2p
 
 ### Set Pronouncing Dictionary Here ###
@@ -143,9 +148,9 @@ class Phone_Functions():
 
 
 
-class Search_Functions():
+class Search():
 
-    def find_perfectHomophones(Search_Term, generate=False):
+    def perfectHomophones(Search_Term, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of words with the exact same pronunciation in CMU Dict.
@@ -155,7 +160,7 @@ class Search_Functions():
 
         return PerfectHomophones
 
-    def find_closeHomophones(Search_Term, generate=False):
+    def closeHomophones(Search_Term, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of words with the near-exact same pronunciation in CMU Dict
@@ -168,7 +173,7 @@ class Search_Functions():
 
         return CloseHomophones
 
-    def find_vowelClassHomophones(Search_Term, generate=False):
+    def vowelClassHomophones(Search_Term, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and classifies its vowel phones according to ARPAbet. (See the ARPAbet_phonemes_dict above.)
@@ -182,7 +187,7 @@ class Search_Functions():
 
         return VowelClassHomophones
 
-    def find_phoneClassHomophones(Search_Term, generate=False):
+    def phoneClassHomophones(Search_Term, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and classifies its phones according to ARPAbet. (See the ARPAbet_phonemes_dict above.)
@@ -196,7 +201,7 @@ class Search_Functions():
 
         return PhoneClassHomophones
 
-    def find_endRhymes(Search_Term, match_syllables=False, match_alpha=False, generate=False):
+    def endRhymes(Search_Term, match_syllables=False, match_alpha=False, generate=False):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of end-rhyming words in CMU Dict.
