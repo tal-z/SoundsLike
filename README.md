@@ -30,9 +30,9 @@
         <h3>
             Simple usage:
         </h3>
-            
+            <code>
             from SoundsLike import FindHomophones
-            <hr>
+            </code>
         <br>
         <br>
         <h3>
