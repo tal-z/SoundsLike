@@ -7,7 +7,22 @@
             <br>
             SoundsLike helps find words that sound like other words.
         </h1>
-        <h3> 
+        <h3>
+            What it does:
+        </h3>
+            <br>
+            SoundsLike provides various functions that attempt to generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
+            <br>
+            <br>
+        <h3>
+            Who it's for:
+        </h3>
+            <br>
+            SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
+            -Telephone Customer Service
+            -Immigration Research
+        <br>
+        <h3>
             SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict
             <br>
             It also offers some tools for working with dictionaries, if you prefer to use your own. 
