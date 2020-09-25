@@ -1,5 +1,7 @@
 # Welcome to SoundsLike.  <br>SoundsLike is a python package.  <br>SoundsLike helps find words that sound like other words.
 
+<div style="text-align: right">### **SoundsLike is developed by Tal Zaken.**</div>
+
 ## What it does:
 SoundsLike provides various functions that attempt to generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
 
@@ -62,7 +64,7 @@ For detailed instructions, try running `help(SoundsLike)` in your interactive py
 ###### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict  <br>It also offers some tools for working with dictionaries, if you prefer to use your own. <br>Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p  <br>Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html  
 
 
-### **SoundsLike is developed by Tal Zaken.**
+
 
 ***
 
