@@ -16,7 +16,9 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
 - Database Entity Resolution
 
 ## How to install it:
-For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. Pip install is planned for the future.
+For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. You can download the individual modules instead if you prefer; there are no inter-dependencies. 
+
+Pip install is planned for the future.
 
 ## Contents:
 - Homophones.py
