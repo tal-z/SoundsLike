@@ -7,7 +7,6 @@ SoundsLike provides various functions that attempt to generate lists of similar-
 ### Who it's for:
 
 SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
-
 - Telephone Customer Service
 - Immigration Research
 - Entity Resolution
@@ -46,7 +45,8 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
     
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
-###### Other homophone patterns available in Homophones.py using the `help()` function in your interactive interpreter.
+***Other homophone patterns available in Homophones.py using the `help()` function in your interactive interpreter.***
+
 
 ### Full documentation:
 
