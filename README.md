@@ -1,15 +1,13 @@
-#Welcome to SoundsLike. 
+# Welcome to SoundsLike. 
 
-##SoundsLike is a python package. 
-##SoundsLike helps find words that sound like other words.
+## SoundsLike is a python package. 
+## SoundsLike helps find words that sound like other words.
 
-###
-What it does:
+### What it does:
 
 SoundsLike provides various functions that attempt to generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
 
-## #
-Who it's for:
+### Who it's for:
 
 SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
 
@@ -17,12 +15,11 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
             -Immigration Research
             -Entity Resolution
 
-###
-How to use it:
+### How to use it:
 
 For now, no pip install is available. To use SoundsLike, you'll need to download the .py files and save them where you want them. Pip install is planned for the future.
 
-Simple usage:
+#### Simple usage:
 
             from SoundsLike.Homophones import Search
 
@@ -30,43 +27,34 @@ Simple usage:
 
             ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
             
-###
-SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict
-It also offers some tools for working with dictionaries, if you prefer to use your own. 
-Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p
-Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html
+### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict
+### It also offers some tools for working with dictionaries, if you prefer to use your own. 
+### Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p
+### Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html
 
-SoundsLike is developed by Tal Zaken.
+### SoundsLike is developed by Tal Zaken.
 
-###
-Credits:
+### Credits:
         -The CMU Pronouncing Dictionary
         -cmudict python wrapper by David L. Day
         -g2p-en python module by Kyubyong Park
 
-###
-Dependencies:
+### Dependencies:
       
 json, sys, re, cmudict, g2p-en
  
-###
-Notes:
+### Notes:
+        -While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results. Resultantly, multi-token results are not supported at this time.
+        -Support is not presently offered for multiple pronunciations of a given token.
+        -English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This would be useful if one wishes to add terms to a custom dictionary.
 
--While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results. Resultantly, multi-token results are not supported at this time.
--Support is not presently offered for multiple pronunciations of a given token.
--English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This would be useful if one wishes to add terms to a custom dictionary.
+### Ideas:
 
-###
-Ideas:
+        -create match pattern for same first and last syllable, and same number of syllables.
+        -Add multi-token results. Check each token in multi-token search terms, and concatenate all possible results if all tokens are found. e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
+        -Develop module to figure out "smart selection" results for display.
 
--create match pattern for same first and last syllable, and same number of syllables.
-
--Add multi-token results. Check each token in multi-token search terms, and concatenate all possible results if all tokens are found. e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
-
--Develop module to figure out "smart selection" results for display.
-
-###
-License:
+### License:
 
 Licensed under the Apache License, Version 2.0
 
