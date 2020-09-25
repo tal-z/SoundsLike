@@ -47,7 +47,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
     
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
-### Other homophone patterns available in Homophones.py using the `help()` function in your interactive interpreter. Examples include:
+###### Other homophone patterns available in Homophones.py using the `help()` function in your interactive interpreter.  <br>Examples include:
 *- Vowel-class Homophones:  Vowel sounds are reduced to their ARPAbet classification.*
 *- Phone-class Homophones:  All phones are reduced to their ARPAbet classification.*
 *- End-rhymes:  Traditional rhyming. Takes optional arguments to find end-rhymes with same syllabic length and/or same first initial.*
