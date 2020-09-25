@@ -46,7 +46,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
     
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
-##### Other Homophone Patterns:
+####### Other Homophone Patterns available via help(SoundsLike.Homophones)
 
 ### Full documentation:
 
