@@ -25,6 +25,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 
 ## Simple usage:
 ### Perfect Homophones:
+***Example 1***
 
     from SoundsLike.Homophones import Search
     
