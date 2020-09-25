@@ -17,7 +17,7 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
 For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. Pip install is planned for the future.
 
 ### Simple usage:
-##### Perfect Homophones:
+#### Perfect Homophones:
 
     from SoundsLike.Homophones import Search
     
@@ -25,7 +25,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
     
 `['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']`
 
-##### Close Homophones:
+#### Close Homophones:
 ***Example 1***
 
     Search.perfectHomophones('Lucy')
