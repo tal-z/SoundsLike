@@ -29,9 +29,12 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 
 `['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']`
             
-### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict  <br>It also offers some tools for working with dictionaries, if you prefer to use your own. Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p  Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html  
+### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict  <br>It also offers some tools for working with dictionaries, if you prefer to use your own. <br>Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p  <br>Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html  
 
-### SoundsLike is developed by Tal Zaken.
+
+## SoundsLike is developed by Tal Zaken.
+
+***
 
 ### Credits:
 - The CMU Pronouncing Dictionary
