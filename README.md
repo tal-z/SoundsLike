@@ -15,15 +15,17 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
 - Immigration Research
 - Entity Resolution
 
-### How to use it:
+### How to install it:
 
 For now, no pip install is available. To use SoundsLike, you'll need to download the .py files and save them where you want them. Pip install is planned for the future.
 
-#### Simple usage:
+### Simple usage:
 
     from SoundsLike.Homophones import Search
-    
+    <br>
     Search.perfectHomophones('Jonathan')
+    <br>
+
 
 
     ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
