@@ -1,13 +1,15 @@
 """
-FindHomophones is a module with functions for finding similar-sounding words.
-FindHomophones is the first module of the SoundLike library.
+Homophones is a module with functions for finding similar-sounding words.
+Homophones is the first module of the SoundLike package.
+
 Created by Tal Zaken.
 """
 
 import sys
 import re
 import cmudict
-from GeneratePronunciation import generate_pronunciation
+import warnings
+from g2p_en import G2p
 
 ### Set Pronouncing Dictionary Here ###
 """
@@ -48,7 +50,7 @@ class Word_Functions():
                 w_pron = CMU_dict[w]
                 search_pron.append(w_pron)
             elif generate:
-                 return generate_pronunciation(term)
+                 return Pronunciation_Functions.generate_pronunciation(term)
             else:
                 sys.exit(
                     "Dictionary Error: Search term or search token not found in dictionary. "
@@ -116,6 +118,15 @@ class Pronunciation_Functions():
             classified_pron.append(phone)
 
         return classified_pron
+
+    def generate_pronunciation(text):
+        g2p = G2p()
+        if text not in cmudict.dict():
+            warnings.warn(
+                'Search term not found in CMU Dict. Making best guess at pronunciation based on grapheme. Be careful!')
+            return [phone for phone in g2p(text) if phone != ' ']
+        else:
+            return cmudict.dict()[text]
 
 
 class Phone_Functions():
