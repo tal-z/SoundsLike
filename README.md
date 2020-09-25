@@ -1,6 +1,6 @@
 # Welcome to SoundsLike.  <br>SoundsLike is a python package.  <br>SoundsLike helps find words that sound like other words.
 
-### <div style="text-align: right">**SoundsLike is developed by Tal Zaken.**</div>
+### <p align="right">**SoundsLike is developed by Tal Zaken.**</p>
 
 ***
 
