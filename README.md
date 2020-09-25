@@ -10,7 +10,6 @@
         <h3>
             What it does:
         </h3>
-            <br>
             SoundsLike provides various functions that attempt to generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
             <br>
             <br>
