@@ -1,21 +1,18 @@
 # Welcome to SoundsLike.  <br>SoundsLike is a python package.  <br>SoundsLike helps find words that sound like other words.
 
-### What it does:
-
+## What it does:
 SoundsLike provides various functions that attempt to generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
 
-### Who it's for:
-
+## Who it's for:
 SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
 - Telephone Customer Service
 - Immigration Research
 - Database Entity Resolution
 
-### How to install it:
-
+## How to install it:
 For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. Pip install is planned for the future.
 
-### Contents:
+## Contents:
 - Homophones.py
 - DictionaryTools.py
 - FuzzyTerm.py
@@ -50,7 +47,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
     
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
-***Other homophone patterns available in Homophones.py using the `help()` function in your interactive interpreter. Examples include:***
+### Other homophone patterns available in Homophones.py using the `help()` function in your interactive interpreter. Examples include:
 *- Vowel-class Homophones:  Vowel sounds are reduced to their ARPAbet classification.*
 *- Phone-class Homophones:  All phones are reduced to their ARPAbet classification.*
 *- End-rhymes:  Traditional rhyming. Takes optional arguments to find end-rhymes with same syllabic length and/or same first initial.*
