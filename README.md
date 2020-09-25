@@ -9,11 +9,16 @@ SoundsLike provides various functions that attempt to generate lists of similar-
 SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
 - Telephone Customer Service
 - Immigration Research
-- Entity Resolution
+- Database Entity Resolution
 
 ### How to install it:
 
 For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. Pip install is planned for the future.
+
+### Contents:
+- Homophones.py
+- DictionaryTools.py
+- FuzzyMatch.py
 
 ### Simple usage:
 #### Perfect Homophones:
@@ -51,7 +56,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 ### Full documentation:
 
 Coming soon! 
-For detailed instructions, try running `help(SoundsLike)` in your interactive python interpreter.
+For detailed instructions, try running `help(SoundsLike)` in your interactive python interpreter. You can also run `help()` on any of the individual modules contained in SoundsLike.
             
 ###### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict  <br>It also offers some tools for working with dictionaries, if you prefer to use your own. <br>Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p  <br>Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html  
 
