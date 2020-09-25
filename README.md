@@ -43,7 +43,6 @@
                 ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
             </samp>
             <br>
-            
         <br>
         <br>
         <h3>
