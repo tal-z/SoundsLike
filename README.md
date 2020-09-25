@@ -34,10 +34,11 @@
         <h3>
             Simple usage:
         </h3>
-            <code>
+            <pre><code>
                 >>> from SoundsLike.Homophones import Search
                 >>> Search.perfectHomophones('Jonathan')
-            </code>
+            </code></pre>
+            <br>
             <samp>
                 ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
             </samp>
