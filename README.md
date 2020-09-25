@@ -21,7 +21,7 @@
             -Immigration Research
         <br>
         <br>
-        #### How to use it:
+        How to use it:
         for now, no pip install is available. You gotta download the .py files and save them where you want them.
 
         <h3>
