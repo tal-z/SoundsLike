@@ -1,4 +1,4 @@
-# <p align="left">Welcome to SoundsLike.</p>
+# <p align="right">Welcome to SoundsLike.</p>
     
 ## <p align="right">SoundsLike is a python package.  <br>SoundsLike helps find words that sound like other words.</p>
 
