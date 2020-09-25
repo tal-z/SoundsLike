@@ -38,10 +38,10 @@
             from SoundsLike.Homophones import Search
             <br>
             Search.perfectHomophones('Jonathan')
-            </code></pre>
-        <samp>
+            <samp>
                 ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
             </samp>
+            </code></pre>
             <br>
         <br>
         <br>
