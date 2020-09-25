@@ -14,7 +14,7 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
 
 ### How to install it:
 
-For now, no pip install is available. To use SoundsLike, you'll need to download the .py files and save them where you want them. Pip install is planned for the future.
+For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. Pip install is planned for the future.
 
 ### Simple usage:
 
