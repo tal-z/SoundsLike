@@ -28,7 +28,7 @@
         <h3>
             How to use it:
         </h3>
-            For now, no pip install is available. You'll need to download the .py files and save them where you want them.
+            For now, no pip install is available. To use SoundsLike, you'll need to download the .py files and save them where you want them. Pip install is planned for the future.
         <br>
         <br>
         <h3>
@@ -36,8 +36,11 @@
         </h3>
             <code>
                 <br>
-                coming soon!
+                >>> from SoundsLike.Homophones import Search
                 <br>
+                >>> Search.perfectHomophones('Jonathan')
+                <br>
+                ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
             </code>
         <br>
         <br>
