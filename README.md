@@ -21,11 +21,11 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 
 #### Simple usage:
 
-            from SoundsLike.Homophones import Search
-
-            Search.perfectHomophones('Jonathan')
-
-            ['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
+> from SoundsLike.Homophones import Search
+> 
+> Search.perfectHomophones('Jonathan')
+>
+>\['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']
             
 ### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict
 ### It also offers some tools for working with dictionaries, if you prefer to use your own. 
