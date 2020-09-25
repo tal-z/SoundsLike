@@ -27,6 +27,12 @@
             For now, no pip install is available. You'll need to download the .py files and save them where you want them.
         <br>
         <br>
+        <h3>
+            Simple usage:
+        </h3>
+            
+            from SoundsLike import FindHomophones
+            <hr>
         <br>
         <br>
         <h3>
