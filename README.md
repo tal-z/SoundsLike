@@ -17,8 +17,12 @@
             Who it's for:
         </h3>
             SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
+            <br>
             -Telephone Customer Service
+            <br>
             -Immigration Research
+            <br>
+            -Entity Resolution
         <br>
         <br>
         <h3>
