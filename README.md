@@ -17,8 +17,8 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 - DictionaryTools.py
 - FuzzyTerm.py
 
-### Simple usage:
-#### Perfect Homophones:
+## Simple usage:
+### Perfect Homophones:
 
     from SoundsLike.Homophones import Search
     
@@ -26,7 +26,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
     
 `['Johnathan', 'Johnathon', 'Jonathan', 'Jonathon', 'Jonothan']`
 
-#### Close Homophones:
+### Close Homophones:
 ***Example 1***
 
     Search.perfectHomophones('Lucy')
@@ -54,7 +54,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 
 
 
-### Full documentation:
+## Full documentation:
 
 Coming soon! 
 For detailed instructions, try running `help(SoundsLike)` in your interactive python interpreter. You can also run `help()` on any of the individual modules contained in SoundsLike.
