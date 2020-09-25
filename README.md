@@ -18,7 +18,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 ### Contents:
 - Homophones.py
 - DictionaryTools.py
-- FuzzyMatch.py
+- FuzzyTerm.py
 
 ### Simple usage:
 #### Perfect Homophones:
