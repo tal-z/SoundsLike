@@ -14,6 +14,8 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
 - Immigration Research
 - Database Entity Resolution
 
+That said, it's mostly just for me and my own learning journey. If it's useful for you, though, even better!
+
 ## How to install it:
 For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike package and save it where you want it. You can download the individual modules instead if you prefer; there are no inter-dependencies. 
 
