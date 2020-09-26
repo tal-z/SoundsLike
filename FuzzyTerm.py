@@ -54,7 +54,7 @@ def DEPREC_fuzzy_CMU_key(word, tolerance=91):
                      )
 
 
-def fuzzy_term(term, cutoff=.7):
+def fuzzy_term(term, cutoff=.9, suppress_error=False):
     """
     Takes a multi-word search term.
     For each word in the term:
@@ -84,8 +84,10 @@ def fuzzy_term(term, cutoff=.7):
     fuzzy_term = ' '.join(fuzzy_term)
     if fuzzy_term:
         return fuzzy_term
+    elif suppress_error:
+        return term
     else:
-        sys.exit('Could not identify a similar term. Perhaps try adjusting the delta cutoff. '
+        sys.exit('Error: Could not identify a similar term. Perhaps try adjusting the delta cutoff. '
                  '(Cutoff must be between 0 and 1)'
                  )
 
