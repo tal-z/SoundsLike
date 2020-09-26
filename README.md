@@ -2,8 +2,7 @@
     
 ## <p align="right">SoundsLike is a python package  <br>SoundsLike helps find words that sound like other words</p>
 
-### <p align="right">**Developed by Tal Zaken**</p>
-###### <p align="right">It's his first package, so please be kind</p>
+### <p align="right">**Developed by Tal Zaken** <br> ###### It's his first package, so please be kind</p>
 
 ***
 
