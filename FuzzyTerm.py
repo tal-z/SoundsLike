@@ -1,8 +1,5 @@
 """
-dev notes:
-
--Consider swapping fuzzywuzzy for difflib to simplify, speed up, and resolve UserWarning.
--Need to make this play nicely with multi-word terms.
+This module provides spellchecker functionality that plays nicely with SoundsLike search functions. See test program for sample usage.
 """
 
 import cmudict
