@@ -7,7 +7,7 @@
 ***
 
 ## What it does:
-SoundsLike provides various functions that attempt to generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
+SoundsLike provides various functions that generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
 
 ## Who it's for:
 SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
@@ -16,7 +16,7 @@ SoundsLike is for anyone who deals with messy names, misspelled words, or bad tr
 - Database Entity Resolution
 
 ## How to install it:
-For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike directory and save it where you want it. You can download the individual modules instead if you prefer; there are no inter-dependencies. 
+For now, no pip install is available. To use SoundsLike, you'll need to download the SoundsLike package and save it where you want it. You can download the individual modules instead if you prefer; there are no inter-dependencies. 
 
 Pip install is planned for the future.
 
