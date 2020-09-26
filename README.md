@@ -56,7 +56,7 @@ Pip install is planned for the future.
     
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
-#### Other homophone patterns are available in Homophones.py. Explore them using the `help()` function in your interactive interpreter.  <br>Examples include:
+#### Other homophone and rhyming patterns are available in SoundsLike.py. Explore them using the `help()` function in your interactive interpreter.  <br>Examples include:
 - **Vowel-class Homophones:**  Vowel sounds are reduced to their ARPAbet classification.
 - **Phone-class Homophones:**  All phones are reduced to their ARPAbet classification.
 - **End-rhymes:**  Traditional rhyming. Takes optional arguments to find end-rhymes with same syllabic length and/or same first initial.
@@ -67,7 +67,7 @@ Pip install is planned for the future.
 Coming eventually! 
 
 For detailed instructions, try running `help(SoundsLike)` in your interactive python interpreter. 
-You can also run `help()` on any of the individual modules contained in SoundsLike, though you may need to import them individually to do so.
+You can also run `help()` on any of the individual modules contained in SoundsLike, though you may need to import them individually to do so. Keep in mind that the package is called SoundsLike, and the primary module is also called SoundsLike, so just make sure you specify the correct one.
             
 ###### SoundsLike uses the CMU Pronouncing Dictionary: http://www.speech.cs.cmu.edu/cgi-bin/cmudict  <br>It also offers some tools for working with dictionaries, if you prefer to use your own. <br>Phoneme generation, when enabled, is provided by g2p-en: https://github.com/Kyubyong/g2p  <br>Similar string matching is provided by difflib: https://docs.python.org/3/library/difflib.html  
 
