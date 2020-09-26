@@ -21,7 +21,7 @@ For now, no pip install is available. To use SoundsLike, you'll need to download
 Pip install is planned for the future.
 
 ## Contents:
-- Homophones.py
+- SoundsLike.py
 - DictionaryTools.py
 - FuzzyTerm.py
 
@@ -29,7 +29,7 @@ Pip install is planned for the future.
 ### Perfect Homophones:
 ***Example 1***
 
-    from SoundsLike.Homophones import Search
+    from SoundsLike.SoundsLike import Search
     
     Search.perfectHomophones('Jonathan')
     
