@@ -83,7 +83,11 @@ You can also run `help()` on any of the individual modules contained in SoundsLi
 
 ### Dependencies:
       
-json, sys, re, cmudict, g2p-en
+- cmudict
+- g2p-en
+- json
+- sys
+- re
  
 ### Notes:
 - While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results. Resultantly, multi-token results are not supported at this time.
