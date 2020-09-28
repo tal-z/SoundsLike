@@ -58,7 +58,7 @@ Pip install is planned for the future.
 `['Lucey', 'Lucie', 'Lucy', 'Luisi']`
 
 #### Other homophone and rhyming patterns are available in SoundsLike.py. Explore them using the `help()` function in your interactive interpreter.  <br>Examples include:
-- **Vowel-class Homophones:**  Vowel sounds are reduced to their ARPAbet classification.
+- **Vowel-class Homophones:**  Vowel phones are reduced to their ARPAbet classification.
 - **Phone-class Homophones:**  All phones are reduced to their ARPAbet classification.
 - **End-rhymes:**  Traditional rhyming. Takes optional arguments to find end-rhymes with same syllabic length and/or same first initial.
 
