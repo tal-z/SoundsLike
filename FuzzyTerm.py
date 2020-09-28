@@ -84,7 +84,6 @@ def fuzzy_term(term, cutoff=.9, suppress_error=False):
     elif suppress_error:
         return term
     else:
-        sys.exit('Error: Could not identify a similar term. Perhaps try adjusting the delta cutoff. '
+        raise ValueError('Error: Could not identify a similar term. Perhaps try adjusting the delta cutoff. '
                  '(Cutoff must be between 0 and 1)'
-                 )
-
+                         )
