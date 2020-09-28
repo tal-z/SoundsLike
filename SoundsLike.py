@@ -9,8 +9,6 @@ Dependencies:
 Created by Tal Zaken.
 """
 
-
-import sys
 import re
 import warnings
 import cmudict
@@ -57,7 +55,7 @@ class Word_Functions():
             elif generate:
                  return Pronunciation_Functions.generate_pronunciation(term)
             else:
-                sys.exit(
+                raise ValueError(
                     "Dictionary Error: Search term or search token not found in dictionary. "
                     "Contact administrator to update dictionary if necessary."
                 )
