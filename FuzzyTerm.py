@@ -3,7 +3,6 @@ This module provides spellchecker functionality that plays nicely with SoundsLik
 """
 
 import cmudict
-import sys
 from difflib import get_close_matches
 import warnings
 
@@ -27,7 +26,7 @@ def DEPREC_fuzzy_CMU_keys(word, tolerance=91):
         if not len(fuzz_list) == 0:
             return fuzz_list
         else:
-            sys.exit("I tried, but I couldn't find any good results. "
+            raise ValueError("I tried, but I couldn't find any good results. "
                      "Consider lowering the similarity tolerance to increase the number of matches."
                      )
 
@@ -46,7 +45,7 @@ def DEPREC_fuzzy_CMU_key(word, tolerance=91):
             closest_fuzz = fuzz_list
             return closest_fuzz
         else:
-            sys.exit("Could not find any good search terms. "
+            raise ValueError("Could not find any good search terms. "
                      "Consider lowering the similarity tolerance to find a match."
                      )
 
