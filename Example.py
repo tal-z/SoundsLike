@@ -16,12 +16,12 @@ dictionary = {k: v for k, v in cmudict.entries()} ##  Point this at your preferr
 ### Search Setup Area ###
 
 """ Enter Search Term Here """
-test_term = 'paris' # <--- You may get an error with this term.
+test_term = 'Leanne' # <--- You may get an error with this term.
                      # Try some other constructions and see what happens.
                      # E.g. Lianne, Lee Ann, Lee N.
 
 """Specify whether you want to search for similar terms, if your term is not found in CMU Dict."""
-enable_fuzzyTerm = True # <--- See what happens when you set this to True.
+enable_fuzzyTerm = False # <--- See what happens when you set this to True.
                          # Perhaps try it with the various constructions from above.
 
 """Specify whether you want to generate a pronunciation if your term (or fuzzy term) is not found. 
