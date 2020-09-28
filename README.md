@@ -87,7 +87,6 @@ You can also run `help()` on any of the individual modules contained in SoundsLi
 - cmudict
 - g2p-en
 - json
-- sys
 - re
  
 ### Notes:
@@ -96,7 +95,7 @@ You can also run `help()` on any of the individual modules contained in SoundsLi
 - English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This would be useful if one wishes to add terms to a custom dictionary.
 
 ### Ideas:
-
+- Provide option to import CMUdict (or any other dict) from a JSON, so that functions can reference it directly (rather than it being imported anew each time a function is called). 
 - Create match pattern for same first and last syllable, and same number of syllables.
 - Add multi-token results. Check each token in multi-token search terms, and concatenate all possible results if all tokens are found. e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
 - Develop module to figure out "smart selection" results for display.
