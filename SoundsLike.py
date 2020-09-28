@@ -1,6 +1,6 @@
 """
-Homophones is a module with functions for finding similar-sounding words.
-Homophones is the first module of the SoundLike package.
+SoundsLike is a module with functions for finding similar-sounding words.
+SoundsLike is the first module of the SoundLike package.
 
 Dependencies:
 -cmudict (python package available via PyPI)
