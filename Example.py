@@ -1,3 +1,7 @@
+"""
+This program is an example implementation of the SoundsLike package. 
+This example demonstrates its most basic usage, for generating lists of similar-sounding search terms.
+"""
 from SoundsLike.SoundsLike import Search
 from SoundsLike.FuzzyTerm import fuzzy_term
 import cmudict
