@@ -24,6 +24,7 @@ That said, it's mostly just for me and my own learning journey. If it's useful f
 - SoundsLike.py
 - DictionaryTools.py
 - FuzzyTerm.py
+- Example.py
 
 ## Simple usage:
 ### Perfect Homophones:
