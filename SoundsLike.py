@@ -18,7 +18,7 @@ from g2p_en import G2p
 """
 DictionaryFilepath = "C:/filepath/dictionary.json"
 f = open(DictionaryFilepath).read()
-CMU_dict = json.loads(f)
+dictionary = json.loads(f)
 """
 
 CMU_dict = {k: v for k, v in cmudict.entries()}
@@ -43,14 +43,14 @@ class Word_Functions():
             word = None
         return word
 
-    def pronunciation(term, generate=False):
+    def pronunciation(term, generate=False, dictionary=CMU_dict):
         """Takes a term and returns its pronunciation in CMU dict.
         Default behavior is to throw an error if no pronunciation is found.
         if optional argument generate=True, it will attempt to generate a pronunciation."""
         search_pron = []
         for w in term.lower().split():
-            if w in CMU_dict:
-                w_pron = CMU_dict[w]
+            if w in dictionary:
+                w_pron = dictionary[w]
                 search_pron.append(w_pron)
             elif generate:
                  return Pronunciation_Functions.generate_pronunciation(term)
@@ -148,17 +148,17 @@ class Phone_Functions():
 
 class Search():
 
-    def perfectHomophones(Search_Term, generate=False):
+    def perfectHomophones(Search_Term, generate=False, dictionary=CMU_dict):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of words with the exact same pronunciation in CMU Dict.
         """
         Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
-        PerfectHomophones = [word.title() for word in CMU_dict if CMU_dict[word] == Search_Pron]
+        PerfectHomophones = [word.title() for word in dictionary if dictionary[word] == Search_Pron]
 
         return PerfectHomophones
 
-    def closeHomophones(Search_Term, generate=False):
+    def closeHomophones(Search_Term, generate=False, dictionary=CMU_dict):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of words with the near-exact same pronunciation in CMU Dict
@@ -167,11 +167,11 @@ class Search():
         Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
         Search_Pron = [Phone_Functions.unstressed_phone(p) for p in Search_Pron]
 
-        CloseHomophones = [word.title() for word in CMU_dict if [Phone_Functions.unstressed_phone(p) for p in CMU_dict[word]] == Search_Pron]
+        CloseHomophones = [word.title() for word in dictionary if [Phone_Functions.unstressed_phone(p) for p in dictionary[word]] == Search_Pron]
 
         return CloseHomophones
 
-    def vowelClassHomophones(Search_Term, generate=False):
+    def vowelClassHomophones(Search_Term, generate=False, dictionary=CMU_dict):
         """
         Takes a search term, searches its pronunciation,
         and classifies its vowel phones according to ARPAbet. (See the ARPAbet_phonemes_dict above.)
@@ -180,12 +180,12 @@ class Search():
         """
         Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
         VowelClassPron = Pronunciation_Functions.classify_vowel_phones(Search_Pron)
-        VowelClassHomophones = [word.title() for word in CMU_dict
-                                if Pronunciation_Functions.classify_vowel_phones(CMU_dict[word]) == VowelClassPron]
+        VowelClassHomophones = [word.title() for word in dictionary
+                                if Pronunciation_Functions.classify_vowel_phones(dictionary[word]) == VowelClassPron]
 
         return VowelClassHomophones
 
-    def phoneClassHomophones(Search_Term, generate=False):
+    def phoneClassHomophones(Search_Term, generate=False, dictionary=CMU_dict):
         """
         Takes a search term, searches its pronunciation,
         and classifies its phones according to ARPAbet. (See the ARPAbet_phonemes_dict above.)
@@ -194,12 +194,12 @@ class Search():
         """
         Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
         PhoneClassPron = Pronunciation_Functions.classify_phones(Search_Pron)
-        PhoneClassHomophones = [word.title() for word in CMU_dict
-                                if Pronunciation_Functions.classify_phones(CMU_dict[word]) == PhoneClassPron]
+        PhoneClassHomophones = [word.title() for word in dictionary
+                                if Pronunciation_Functions.classify_phones(dictionary[word]) == PhoneClassPron]
 
         return PhoneClassHomophones
 
-    def endRhymes(Search_Term, match_syllables=False, match_alpha=False, generate=False):
+    def endRhymes(Search_Term, match_syllables=False, match_alpha=False, generate=False, dictionary=CMU_dict):
         """
         Takes a search term, searches its pronunciation,
         and returns a list of end-rhyming words in CMU Dict.
@@ -215,22 +215,22 @@ class Search():
         Search_Pron = Word_Functions.pronunciation(Search_Term, generate)
         if not match_syllables:
             if not match_alpha:
-                return [key.title() for key, val in CMU_dict.items()
+                return [key.title() for key, val in dictionary.items()
                         if Search_Pron[Pronunciation_Functions.index_last_stressed_vowel(Search_Pron):] == val[Pronunciation_Functions.index_last_stressed_vowel(val):]
                         ]
             else:
-                return [key.title() for key, val in CMU_dict.items()
+                return [key.title() for key, val in dictionary.items()
                         if Search_Term[0].lower() == key[0]
                         if Search_Pron[Pronunciation_Functions.index_last_stressed_vowel(Search_Pron):] == val[Pronunciation_Functions.index_last_stressed_vowel(val):]
                         ]
         else:
             if not match_alpha:
-                return [key.title() for key, val in CMU_dict.items()
+                return [key.title() for key, val in dictionary.items()
                         if Pronunciation_Functions.count_syllables(Search_Pron) == Pronunciation_Functions.count_syllables(val)
                         if Search_Pron[Pronunciation_Functions.index_last_stressed_vowel(Search_Pron):] == val[Pronunciation_Functions.index_last_stressed_vowel(val):]
                         ]
             else:
-                return [key.title() for key, val in CMU_dict.items()
+                return [key.title() for key, val in dictionary.items()
                         if Search_Term[0].lower() == key[0]
                         if Pronunciation_Functions.count_syllables(Search_Pron) == Pronunciation_Functions.count_syllables(val)
                         if Search_Pron[Pronunciation_Functions.index_last_stressed_vowel(Search_Pron):] == val[Pronunciation_Functions.index_last_stressed_vowel(val):]
