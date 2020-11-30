@@ -6,15 +6,20 @@
 ***
 
 ## What it does:
-SoundsLike provides various functions that generate lists of similar-sounding words for a given search term. This general purpose tool is useful for matching similar strings whose content is made up of the English language.
+SoundsLike provides various functions that generate lists of similar-sounding words for a given search term. This general purpose tool can be useful for matching similar strings whose content is made up of the English language.
 
 ## Who it's for:
-SoundsLike is for anyone who deals with messy names, misspelled words, or bad transcriptions. It is especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
+SoundsLike is for me. I'm interested in using it to deal with with messy names, misspelled words, and bad transcriptions. I think it can be especially useful for resolving mismatches at the interface of typed text and spoken language. Some example applications include:
 - Telephone Customer Service
 - Immigration Research
 - Database Entity Resolution
 
-That said, it's mostly just for me and my own learning journey. If it's useful for you too, that's even better!
+That said, it's mostly just a project to help guide my own learning journey. If it's useful for you too, that's even better!
+
+## Some potential uses:
+- Finding alternate spellings of words.
+- Handling mispronunciations and/or transcription errors in search functions.
+- A songwriting or poem-writing aid.  
 
 ## How to install it:
 
@@ -92,13 +97,14 @@ You can also run `help()` on any of the individual modules contained in SoundsLi
 ### Notes:
 - While this module supports multi-token search terms, it always reduces them to one group of phones. This could lead to some unexpected, but still useful, results. Resultantly, multi-token results are not supported at this time.
 - Support is not presently offered for multiple pronunciations of a given token.
-- English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This would be useful if one wishes to add terms to a custom dictionary.
+- English Language CMU Dict can be swapped out for any other pronunciation dict by uncommenting and setting the DictionaryFilepath to point at a JSON file. This could be useful if one wished to build and use a custom dictionary.
 
 ### Ideas:
 - Provide option to import CMUdict (or any other dict) from a JSON, so that functions can reference it directly (rather than it being imported anew each time a function is called). 
 - Create match pattern for same first and last syllable, and same number of syllables.
 - Add multi-token results. Check each token in multi-token search terms, and concatenate all possible results if all tokens are found. e.g.: "Lee Ann" could return "Leigh Anne," "Lea An," "Lianne," etc.
 - Develop module to figure out "smart selection" results for display.
+-Dramatically speed up subsequent searches by front-loading rhyme-pattern generation and hashing the results. 
 
 ### License:
 
