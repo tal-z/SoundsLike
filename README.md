@@ -4,7 +4,8 @@
 
 ### <p align="right">**Developed by Tal Zaken**</p>
 ***
-
+[![PyPI](https://img.shields.io/pypi/dm/soundslike.svg)]()
+[![PyPI](https://img.shields.io/pypi/v/soundslike.svg)]()
 ## What it does:
 SoundsLike provides various functions that generate lists of similar-sounding words for a given search term. This general purpose tool can be useful for matching similar strings whose content is made up of the English language.
 
